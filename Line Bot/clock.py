@@ -1,8 +1,5 @@
 from apscheduler.schedulers.blocking import BlockingScheduler
 import requests
-import time
-import sys
-import os
 
 from scrapy.crawler import CrawlerProcess
 from Constellations.Constellations.spiders import crawler
@@ -32,7 +29,5 @@ def my_job():
     process.crawl(spider)
  
 sched = BlockingScheduler()
-#sched.add_job(my_job, 'interval', seconds=60)
-#sched.add_job(my_job, 'interval', hours=24, start_date='2020-04-11 16:01:00', end_date='2021-04-11 16:01:01')
 sched.add_job(my_job, 'interval', hours=24, start_date='2020-04-12 00:29:00', end_date='2021-04-11 16:01:01')
 sched.start()

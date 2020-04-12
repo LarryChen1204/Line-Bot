@@ -53,7 +53,7 @@ def handle_message(event):
         
         hostname = 'ec2-54-157-78-113.compute-1.amazonaws.com'
         username = 'asoewrnhfxmhxb'
-        password = 'e2dd638c5540c9f413d73cf8d1eef8240841c845c5ae1b955b07fc2bd0c55049' # your password
+        password = 'e2dd638c5540c9f413d73cf8d1eef8240841c845c5ae1b955b07fc2bd0c55049'
         database = 'dbp958hjtdc6t9'
         
         conn = psycopg2.connect(host=hostname, user=username, password=password, dbname=database)
@@ -102,7 +102,7 @@ def handle_message(event):
     elif event.message.text.find("座") > -1:
         c = horoscope1(event.message.text)
         if c :
-            message = [TextSendMessage(text = '{}, {}\n'.format(c[0], c[1])), TextSendMessage(text = '{}\n{}\n'.format(c[2], c[3])), TextSendMessage(text = '{}\n{}\n'.format(c[4], c[5])), TextSendMessage(text = '{}\n{}\n'.format(c[6], c[7])), TextSendMessage(text = '{}\n{}\n'.format(c[8], c[9]))]
+            message = [TextSendMessage(text = '{}, {}'.format(c[0], c[1])), TextSendMessage(text = '{}\n{}\n'.format(c[2], c[3])), TextSendMessage(text = '{}\n{}\n'.format(c[4], c[5])), TextSendMessage(text = '{}\n{}\n'.format(c[6], c[7])), TextSendMessage(text = '{}\n{}\n'.format(c[8], c[9]))]
         elif event.message.text == '博愛座':
             message = ImageSendMessage(
             original_content_url='https://image.cache.storm.mg/styles/smg-800x533-fp/s3/media/image/2016/04/21/20160421-051022_U5966_M149662_4cfc.jpg',
