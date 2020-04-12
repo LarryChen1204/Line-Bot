@@ -1,0 +1,12 @@
+line-bot-sdk
+flask
+bs4
+beautifulsoup4
+lxml
+js2xml
+scrapy
+cffi
+APScheduler
+crochet
+psycopg2
+pillow
